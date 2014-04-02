@@ -86,6 +86,14 @@
 	}
 }
 
+@include oGridRespondTo(S) {
+
+	.csstransforms .o-ft-header__logo {
+        -webkit-transform: scale(0.8);
+        -webkit-transform-origin: top left;
+	}
+}
+
 @media print {
 	.o-ft-header__logo abbr {
 		text-indent: 0;

@@ -7,6 +7,12 @@
     .o-ft-header {
         min-height: 77 + $o-ft-header-top-offset + px;
     }
+    
+    @include oGridRespondTo(S) {
+        .csstransforms .o-ft-header {
+            min-height: 65 + $o-ft-header-top-offset + px;
+        }
+    }
 
     .o-ft-header__topbar {
         position: fixed;
@@ -26,6 +32,12 @@
 @mixin oFtHeaderPositionStatic ($include-topbar-position: false) {
     .o-ft-header {
         min-height: 77px;
+    }
+
+    @include oGridRespondTo(S) {
+        .csstransforms .o-ft-header {
+            min-height: 65px;
+        }
     }
 
     @if ($o-ft-header-z-index) {
