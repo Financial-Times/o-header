@@ -1,5 +1,5 @@
 .o-ft-header__nav--tools-theme {
-	@extend %o-hierarchical-nav--horizontal-theme;
+	@include oHierarchicalNavHorizontalTheme;
 	// Min width of the element should fit at least one tool item
 	min-width: 55px;
 	height: 80px;
