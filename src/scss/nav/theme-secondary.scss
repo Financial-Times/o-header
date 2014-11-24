@@ -1,5 +1,5 @@
 .o-ft-header__nav--secondary-theme {
-	@extend %o-hierarchical-nav--horizontal-theme;
+	@include oHierarchicalNavHorizontalTheme;
 
 	// Sass variable that slightly tints the colour to white for selected elements
 	$_o-ft-header-secondary-selected: mix($o-ft-header-brand-color, oColorsGetPaletteColor(white), 75%);

@@ -1,5 +1,5 @@
 .o-ft-header__nav--tools-theme {
-	@extend %o-hierarchical-nav--horizontal-theme;
+	@include oHierarchicalNavHorizontalTheme;
 	// Min width of the element should fit at least one tool item
 	min-width: 55px;
 	height: 80px;
@@ -64,12 +64,6 @@
 			padding: 10px 20px;
 			font-size: 14px;
 		}
-	}
-}
-
-@include oUseragentTarget((ie7, ie8)) {
-	.o-ft-header__nav--tools-theme .o-ft-header__back-to-ft {
-		filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='#{oFtHeaderAsset('img/ft-logo.png')}',sizingMethod='scale');
 	}
 }
 

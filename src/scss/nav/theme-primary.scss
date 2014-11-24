@@ -1,5 +1,5 @@
 .o-ft-header__nav--primary-theme {
-	@extend %o-hierarchical-nav--horizontal-theme;
+	@include oHierarchicalNavHorizontalTheme;
 	height: 80px;
 	text-align: right;
 	// Used in core experience so hidden elements don't continue appearing
