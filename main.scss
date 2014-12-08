@@ -1,3 +1,4 @@
+@warn "The Origami User Agent Sass part of this module is deprecated. Please use an alternative way to provide styles for a specific user agent: conditional comments, selector and property hacks… Feel free to use http://browserhacks.com";
 @import "o-assets/main";
 @import "o-useragent/main";
 @import "o-grid/main";
