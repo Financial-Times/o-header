@@ -1,29 +1,16 @@
 .o-header {
-	position: relative;
+	position: sticky;
+	padding-bottom: 0;
+	top: 0;
 	z-index: 21;
-	padding-bottom: 46px;
 
 	@include oGridRespondTo(M) {
+		position: relative;
 		padding-bottom: 0;
-	}
-	.o-header-before + & {
-		padding-bottom: 0;
-		position: -webkit-sticky;
-		position: -moz-sticky;
-		position: -ms-sticky;
-		position: -o-sticky;
-		position: sticky;
-		top: 0;
-
-		@include oGridRespondTo(M) {
-			position: relative;
-		}
 	}
 	.o-header__row--primary {
-		position: fixed;
-		left: 0;
-		right: 0;
 		transition: transform 150ms;
+
 		@include oGridRespondTo(M) {
 			position: relative;
 		}
