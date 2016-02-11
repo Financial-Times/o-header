@@ -1,7 +1,6 @@
 .o-header__membership-promo-container {
 	background-color: getColor('black');
 	display: block;
-	z-index: 18;
 	@include oGridRespondTo(M) {
 		display: none;
 	}
