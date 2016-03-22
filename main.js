@@ -9,7 +9,7 @@ const init = flags => {
 	preventScroll.init();
 	toggle.init(flags);
 	selected.init(flags);
-	editionSwitcher.init(document.querySelector('.edition-switcher'), flags);
+	editionSwitcher.init(document.querySelector('.edition-switcher'));
 };
 
 export default {
