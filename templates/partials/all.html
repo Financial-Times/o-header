@@ -8,7 +8,7 @@
     {{/each}}
   </li>
 
-  {{#ifAll flags.editionSwitcher editions}}
+  {{#if editions}}
     <li class="navigation__menu__group__item navigation__menu__group__item--mobile">
       <div class="navigation__menu__group__container">
         <button class="navigation__menu__link--sub-level-header button-style-reset js-select selected" data-trackable="edition-switcher">
@@ -28,13 +28,13 @@
         </ol>
       </div>
     </li>
-  {{/ifAll}}
+  {{/if}}
 
   {{#each all}}
     {{#if children}}
       <li class="navigation__menu__group__item">
         <div class="navigation__menu__group__container">
-          <button class="navigation__menu__link--sub-level-header button-style-reset js-select {{#unless @root.flags.editionSwitcher}}{{#ifEquals @index 1}}selected{{/ifEquals}}{{/unless}}" data-navigation-href="{{href}}" data-trackable="{{name}}">
+          <button class="navigation__menu__link--sub-level-header button-style-reset js-select" data-navigation-href="{{href}}" data-trackable="{{name}}">
             <span class="navigation__menu__link navigation__menu__link--sub-level">{{name}}</span>
           </button>
           <ol class="navigation__menu__group__sub-items">

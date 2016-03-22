@@ -23,9 +23,7 @@ class EditionSwitcher {
 }
 
 export default {
-	init: (editionSwitcherEl, flags) => {
-		if (flags.get('editionSwitcher')) {
-			new EditionSwitcher(editionSwitcherEl);
-		}
+	init: (editionSwitcherEl) => {
+		new EditionSwitcher(editionSwitcherEl);
 	}
 }
