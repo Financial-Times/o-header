@@ -22,7 +22,7 @@ class Utils {
 		this.selectableHandler = this.selectableHandler.bind(this);
 		for (let selectableEl of selectableEls) {
 			this.listeners.push([selectableEl, this.selectableHandler]);
-			selectableEl.addEventListener('click', this.selectableHandler.bind(this));
+			selectableEl.addEventListener('click', this.selectableHandler);
 		}
 
 		const subNavToggle = this.headerEl.querySelector('[data-o-header-togglable-nav]');
