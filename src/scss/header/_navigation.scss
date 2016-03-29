@@ -188,6 +188,8 @@ label > * {
 }
 
 .navigation__menu__link--sub-level-header {
+	color: inherit;
+
 	@include oGridColspan($mobile-header-width);
 	padding: 0 15px 0 0;
 
@@ -199,7 +201,6 @@ label > * {
 	}
 
 	@include oGridRespondTo($until: M) {
-		color: oColorsGetPaletteColor('white');
 		text-align: right;
 		padding: 0 2px 0 0;
 		cursor: pointer;
@@ -385,6 +386,7 @@ label > * {
 }
 
 .navigation__menu__toggle {
+	color: inherit;
 	display: block;
 	cursor: pointer;
 
