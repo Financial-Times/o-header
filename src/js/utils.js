@@ -33,6 +33,7 @@ class Utils {
 		}
 
 		const toggleEls = this.headerEl.querySelectorAll('[data-o-header-togglable]');
+		this.toggleHandler = this.toggleHandler.bind(this);
 		for (let toggleEl of toggleEls) {
 			this.listeners.push([toggleEl, this.toggleHandler]);
 			toggleEl.addEventListener('click', this.toggleHandler);
