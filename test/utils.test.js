@@ -180,8 +180,7 @@ describe('Utils instance', () => {
 			expect(document.body.classList.contains('o-header--mega-nav-open')).to.be(false);
 
 			utils.megaNavToggleHandler();
-			expect(document.documentElement.classList.contains('o-header--mega-nav-open')).to.be(true);
-			expect(document.body.classList.contains('o-header--mega-nav-open')).to.be(true);
+			expect(utils.headerEl.classList.contains('o-header--mega-nav-open')).to.be(true);
 		});
 	});
 
