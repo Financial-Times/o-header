@@ -74,8 +74,7 @@ class Utils {
 	}
 
 	megaNavToggleHandler() {
-		document.documentElement.classList.toggle(this.navOpenClass);
-		document.body.classList.toggle(this.navOpenClass);
+		this.headerEl.classList.toggle(this.navOpenClass);
 	}
 
 	toggleHandler(ev) {

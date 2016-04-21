@@ -1,12 +1,12 @@
 @if $o-header-is-silent == false {
 
-	// This is applied to the <body> via JS, this does not comply
-	// with the Origami spec, and issue #129 has been raised
+	// This is applied to the o-header element via JS
 	// It's used to avoid scrolling when the meganav
 	// is open in a mobile view
 	.o-header--mega-nav-open {
 		@include oGridRespondTo($until: M) {
-			overflow-y: hidden;
+			position: fixed;
+			width: 100%;
 			height: 100%;
 		}
 	}
