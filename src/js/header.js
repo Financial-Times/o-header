@@ -31,8 +31,9 @@ class Header {
 		} else if (!(el instanceof HTMLElement)) {
 			el = document.querySelector(el);
 		}
-		const headerEls = el.querySelectorAll('[data-o-component="o-header"]');
+		const headerEls = [...el.querySelectorAll('[data-o-component="o-header"]')];
 		const headers = [];
+
 		for (let headerEl of headerEls) {
 			if (!headerEl.hasAttribute('data-o-header--js')) {
 				headers.push(new Header(headerEl, config));
