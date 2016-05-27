@@ -18,7 +18,7 @@ class Utils {
 		this.navOpenClass = `${config.headerClassName}--mega-nav-open`;
 		this.headerEl = headerEl;
 
-		const selectableEls = this.headerEl.querySelectorAll('[data-o-header-selectable]');
+		const selectableEls = [...this.headerEl.querySelectorAll('[data-o-header-selectable]')];
 		this.selectableHandler = this.selectableHandler.bind(this);
 		for (let selectableEl of selectableEls) {
 			this.listeners.push([selectableEl, this.selectableHandler]);
@@ -35,7 +35,7 @@ class Utils {
 			// in the meganav so columns stay aligned. We want to
 			// apply it to desktop only columns, which isn't possible
 			// via CSS
-			const megaNavSections = this.headerEl.querySelectorAll(`.${config.headerClassName}__meganav-section`);
+			const megaNavSections = [...this.headerEl.querySelectorAll(`.${config.headerClassName}__meganav-section`)];
 			let megaNavSectionPosition = 1;
 			for (let megaNavSection of megaNavSections) {
 				if (!megaNavSection.classList.contains(`${config.headerClassName}__meganav-section--mobile`)) {
@@ -58,7 +58,7 @@ class Utils {
 			}
 		}
 
-		const toggleEls = this.headerEl.querySelectorAll('[data-o-header-togglable]');
+		const toggleEls = [...this.headerEl.querySelectorAll('[data-o-header-togglable]')];
 		for (let toggleEl of toggleEls) {
 			this.listeners.push([toggleEl, this.toggleHandler]);
 			toggleEl.addEventListener('click', this.toggleHandler);
@@ -66,7 +66,7 @@ class Utils {
 	}
 
 	selectableHandler(ev) {
-		const selectableEls = this.headerEl.querySelectorAll('[data-o-header-selectable]');
+		const selectableEls = [...this.headerEl.querySelectorAll('[data-o-header-selectable]')];
 		for (let selectableEl of selectableEls) {
 			selectableEl.setAttribute('aria-selected', 'false');
 		}
