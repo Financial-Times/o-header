@@ -110,7 +110,7 @@ describe('Search instance', () => {
 
 		expect(addEventListenerSpy.calledOn(search.toggleEl)).to.be(true);
 
-		expect(addEventListenerSpy.callCount).to.be(2);
+		expect(addEventListenerSpy.callCount).to.be(3);
 		const toucheEventAndHandler = addEventListenerSpy.args[0];
 		expect(toucheEventAndHandler[0]).to.be('touchend');
 		expect(toucheEventAndHandler[1]).to.be(search.toggleHandler);
