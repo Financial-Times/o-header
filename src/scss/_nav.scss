@@ -267,6 +267,7 @@
 			content: '';
 			position: relative;
 			margin-right: 9px;
+			vertical-align: middle;
 
 			@include oGridRespondTo($until: M) {
 				margin-right: 14px;
