@@ -23,7 +23,7 @@
 						<span class="o-header__top-link-label">Menu</span>
 					</a>
 					{{/hasMenu}}
-					<a href="#o-header-search" class="o-header__top-link o-header__top-link--search" aria-controls="o-header-search">
+					<a href="#o-header-search" class="o-header__top-link o-header__top-link--search o--if-js" aria-controls="o-header-search">
 						<span class="o-header__top-link-label">Search</span>
 					</a>
 				</div>
@@ -45,7 +45,7 @@
 	{{/top}}
 
 	{{#search}}
-	<div id="o-header-search" class="o-header__row o-header__search o--if-no-js" role="search">
+	<div id="o-header-search" class="o-header__row o-header__search" role="search">
 		<div class="o-header__container">
 			<form class="o-header__search-form" action="/search" role="search" aria-label="Site search">
 				<label class="o-header__visually-hidden" for="o-header-search-term">Search the <abbr title="Financial Times">FT</abbr></label>
