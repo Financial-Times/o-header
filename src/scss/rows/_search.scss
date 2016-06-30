@@ -1,6 +1,8 @@
 @if $o-header-is-silent == false {
 
 	.o-header__search {
+		// sorry core experience!
+		display: none;
 		padding: $_o-header-padding-y 0;
 		text-align: center;
 		background: oColorsGetColorFor('o-header-search', 'background');
