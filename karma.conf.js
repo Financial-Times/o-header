@@ -145,8 +145,8 @@ module.exports = function(config) {
 		concurrency: 1, // default Infinity,
 
 		browserStack: {
-      startTunnel: true // let BrowserStack connect to our local server
-    },
+			startTunnel: true // let BrowserStack connect to our local server
+		},
 
 		// define browsers
 		customLaunchers,
