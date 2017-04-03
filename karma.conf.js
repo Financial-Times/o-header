@@ -139,9 +139,14 @@ module.exports = function(config) {
 		browsers,
 
 		browserDisconnectTimeout: 60 * 1000, // default 2000
-		browserDisconnectTolerance: 0, // default 0
+		browserDisconnectTolerance: 3, // default 0
 		browserNoActivityTimeout: 60 * 1000, // default 10000
-		captureTimeout: 60 * 1000, // default 60000
+		captureTimeout: 60 * 2000, // default 60000,
+		concurrency: 1, // default Infinity,
+
+		browserStack: {
+      startTunnel: true // let BrowserStack connect to our local server
+    },
 
 		// define browsers
 		customLaunchers,
