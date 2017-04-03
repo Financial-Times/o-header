@@ -2,9 +2,76 @@
 
 const BowerPlugin = require('bower-webpack-plugin');
 const path = require('path');
+const process = require('process');
 const cwd = process.cwd();
 
 module.exports = function(config) {
+
+	const customLaunchers = {
+		// If browser_version is not set, uses latest stable version
+
+		// Tesing on minimum version for enhanced experience based on
+		// https://docs.google.com/document/d/1mByh6sT8zI4XRyPKqWVsC2jUfXHZvhshS5SlHErWjXU
+
+		// Firefox latest
+		bs_firefox: {
+			base: 'BrowserStack',
+			browser: 'firefox',
+			os: 'OS X',
+			os_version: 'Sierra'
+		},
+
+		// Chrome latest
+		bs_chrome: {
+			base: 'BrowserStack',
+			browser: 'chrome',
+			os: 'OS X',
+			os_version: 'Sierra'
+		},
+
+		// Safari 10
+		bs_safari: {
+			base: 'BrowserStack',
+			browser: 'safari',
+			os: 'OS X',
+			os_version: 'Sierra'
+		},
+
+		// IE 11
+		bs_ie: {
+			base: 'BrowserStack',
+			browser: 'ie',
+			os: 'Windows',
+			os_version: '10'
+		},
+
+		// Edge latest
+		bs_edge: {
+			base: 'BrowserStack',
+			browser: 'edge',
+			os: 'Windows',
+			os_version: '10'
+		},
+
+		// iOS 8
+		bs_iphone6: {
+			base: 'BrowserStack',
+			device: 'iPhone 6',
+			os: 'ios',
+			os_version: '8.3'
+		},
+
+		// Android 4
+		bs_android4: {
+			base: 'BrowserStack',
+			os: 'android',
+			device: 'HTC One X',
+			os_version: '4.0'
+		}
+	};
+
+	const browsers = process.env.CI ? Object.keys(customLaunchers) : ['PhantomJS'] ;
+
 	config.set({
 
 		// base path that will be used to resolve all patterns (eg. files, exclude)
@@ -20,7 +87,8 @@ module.exports = function(config) {
 			'karma-mocha',
 			'karma-sinon',
 			'karma-phantomjs-launcher',
-			'karma-webpack'
+			'karma-webpack',
+			'karma-browserstack-launcher'
 		],
 
 
@@ -68,7 +136,15 @@ module.exports = function(config) {
 
 		// start these browsers
 		// available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-		browsers: ['PhantomJS'],
+		browsers,
+
+		browserDisconnectTimeout: 60 * 1000, // default 2000
+		browserDisconnectTolerance: 0, // default 0
+		browserNoActivityTimeout: 60 * 1000, // default 10000
+		captureTimeout: 60 * 1000, // default 60000
+
+		// define browsers
+		customLaunchers,
 
 
 		// Continuous Integration mode
