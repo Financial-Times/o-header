@@ -61,12 +61,12 @@ module.exports = function(config) {
 			os_version: '8.3'
 		},
 
-		// Android 5
-		bs_android5: {
+		// Android 4.4
+		bs_android4_4: {
 			base: 'BrowserStack',
 			os: 'android',
-			device: 'Google Nexus 5',
-			os_version: '5.0'
+			device: 'Samsung Galaxy S5',
+			os_version: '4.4'
 		}
 	};
 
