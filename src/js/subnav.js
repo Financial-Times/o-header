@@ -1,7 +1,7 @@
 import * as oUtils from 'o-utils';
 
-function init(headerEl) {
-	const subnav = headerEl.querySelector('[data-o-header-subnav]');
+function init () {
+	const subnav = document.querySelector('[data-o-header-subnav]');
 
 	if (subnav === null) {
 		return;
