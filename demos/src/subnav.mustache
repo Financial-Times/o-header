@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="https://origami-build.ft.com/v2/bundles/css?modules=o-tooltip@^2.3.1" />
+
 <header class="o-header" data-o-component="o-header" data-o-header--no-js>
 	{{#nav}}
 	<nav id="o-header-nav-mobile" class="o-header__row o-header__nav o-header__nav--mobile" role="navigation" aria-label="Main navigation">
@@ -72,6 +74,11 @@
 								</a>
 							</li>
 							{{/currentNav.children}}
+							<li class="o-header__subnav-item" id="demo-tooltip-target">
+								<a class="o-header__subnav-link" href="{{href}}">
+									testing tooltip
+								</a>
+							</li>
 						</ul>
 					</div>
 				</div>
@@ -83,3 +90,12 @@
 	{{/subnav}}
 </header>
 
+
+
+<div data-o-component="o-tooltip" data-o-tooltip-position="below" data-o-tooltip-target="demo-tooltip-target" data-o-tooltip-show-on-hover="true">
+	<div class="o-tooltip-content">
+		Share this article via email
+	</div>
+</div>
+
+<script src="https://origami-build.ft.com/v2/bundles/js?modules=o-tooltip@^2.3.1"></script>
