@@ -93,7 +93,7 @@ The list of features is as follows:
 * `subbrand`: Styles for the subbranded section of the header (eg Life&Arts).
 * `megamenu`: Styles for the mega-menu that appears when users hover over a nav item.
 
-To output styles for a feature only, excluding the core header styles, pass `false` as the second parameter.
+To output styles for a feature only, excluding the core header styles, pass `false` as the second argument.
 
 ###### Example
 
