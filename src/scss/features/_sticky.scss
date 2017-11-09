@@ -19,7 +19,7 @@
 	}
 
 	.o-header--sticky-active {
-		@include oVisualEffectsShadowsElevation('mid');
+		@include oEffectsShadowsElevation('mid');
 		transform: translateY(0);
 	}
 }
