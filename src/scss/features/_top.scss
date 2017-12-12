@@ -135,6 +135,7 @@
 		background-size: contain;
 		background-position: 50%;
 		background-repeat: no-repeat;
+		background-size: 100% 100%; // Edge SVG background clipped when scaled https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/4705340/
 
 		@include oGridRespondTo('S') {
 			@include oHeaderLogoSize('S');
