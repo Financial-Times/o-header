@@ -91,7 +91,7 @@
         },
         {
             "name": "pa11y",
-            "data": "demos/src/mega-menu.json",
+            "data": "demos/src/header.json",
             "template": "demos/src/pa11y.mustache",
             "hidden": "true"
         }
