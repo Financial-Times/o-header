@@ -82,13 +82,13 @@
 		&:before {
 			// container size (24) is only included for the fallback image.
 			// IE8 has a static stylesheet generated for the L breakpoint.
-			@include oIconsGetIcon('hamburger', oColorsGetColorFor('o-header-icon'), $_o-header-icon-size-large, $apply-base-styles: false, $apply-width-height: false, $iconset-version: 1);
+			@include oIconsGetIcon('hamburger', oBrandGet('o-header', 'header-icon'), $_o-header-icon-size-large, $apply-base-styles: false, $apply-width-height: false, $iconset-version: 1);
 		}
 	}
 
 	.o-header__top-link--search {
 		&:before {
-			@include oIconsGetIcon('search', oColorsGetColorFor('o-header-icon'), $_o-header-icon-size-large, $apply-base-styles: false, $apply-width-height: false, $iconset-version: 1);
+			@include oIconsGetIcon('search', oBrandGet('o-header', 'header-icon'), $_o-header-icon-size-large, $apply-base-styles: false, $apply-width-height: false, $iconset-version: 1);
 		}
 
 		// when used in tandem with the menu toggle, hide this on smaller screen sizes
@@ -101,7 +101,7 @@
 
 	.o-header__top-link--myft {
 		&:before {
-			@include oHeaderBrandImage('brand-myft', oColorsGetColorFor('o-header-icon'), 52);
+			@include oHeaderBrandImage('brand-myft', oBrandGet('o-header', 'header-icon'), 52);
 			// this is not a very square icon
 			width: 35px;
 			// Remove the negative margin added for new icons which have additional padding
@@ -126,7 +126,7 @@
 	}
 
 	.o-header__top-logo {
-		@include oHeaderBrandImage('brand-ft-masthead', oColorsGetColorFor('o-header-icon'), 500);
+		@include oHeaderBrandImage('brand-ft-masthead', oBrandGet('o-header', 'header-icon'), 500);
 		@include oHeaderLogoSize('XS');
 
 		display: block;

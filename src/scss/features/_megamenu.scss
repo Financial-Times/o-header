@@ -20,8 +20,8 @@
 		z-index: $_o-header-mega-z-index;
 		box-sizing: border-box;
 		padding: $_o-header-mega-padding-y 0;
-		border-top: 1px solid oColorsGetColorFor('o-header', 'border');
-		background-color: oColorsGetColorFor('o-header-mega', 'background');
+		border-top: 1px solid oBrandGet('o-header', 'header-border');
+		background-color: oBrandGet('o-header', 'mega-menu-background');
 
 		&[aria-expanded="true"],
 		// core experience fallback
@@ -46,7 +46,7 @@
 	.o-header__mega-column {
 		display: table-cell;
 		padding-left: $_o-header-mega-padding-x;
-		border-left: 1px solid oColorsGetColorFor('o-header', 'border');
+		border-left: 1px solid oBrandGet('o-header', 'header-border');
 
 		&:first-child {
 			border-left: 0;

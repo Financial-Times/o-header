@@ -2,7 +2,7 @@
 	.o-header__search {
 		padding: $_o-header-padding-y 0;
 		text-align: center;
-		background: oColorsGetColorFor('o-header-search', 'background');
+		background: oBrandGet('o-header', 'search-background');
 
 		&[aria-hidden="false"] {
 			display: block;
@@ -45,8 +45,9 @@
 		flex-grow: 1;
 
 		&:focus {
+			//also, overriden by o-normalise
 			outline: none;
-			border-color: oColorsGetColorFor('o-header-search', 'border');
+			border-color: oBrandGet('o-header', 'search-border');
 		}
 	}
 

@@ -1,27 +1,27 @@
 @mixin oHeaderTransparent() {
 	.o-header--transparent {
 		@include oColorsFor('o-header-transparent', text);
-		border-color: rgba(oColorsGetColorFor('o-header-transparent', border), 0.4);
+		border-color: rgba(oBrandGet('o-header', 'transparency'), 0.4);
 		background-color: transparent;
 
 		.o-header__row {
-			border-bottom-color: rgba(oColorsGetColorFor('o-header-transparent', border), 0.4);
+			border-bottom-color: rgba(oBrandGet('o-header', 'transparency'), 0.4);
 		}
 
 		.o-header__top-link--menu:before {
-			@include oIconsGetIcon('hamburger', oColorsGetColorFor('o-header-transparent-icon'), $_o-header-icon-size-large, $apply-base-styles: false, $apply-width-height: false, $iconset-version: 1);
+			@include oIconsGetIcon('hamburger', oBrandGet('o-header', 'transparency'), $_o-header-icon-size-large, $apply-base-styles: false, $apply-width-height: false, $iconset-version: 1);
 		}
 
 		.o-header__top-link--search:before {
-			@include oIconsGetIcon('search', oColorsGetColorFor('o-header-transparent-icon'), $_o-header-icon-size-large, $apply-base-styles: false, $apply-width-height: false, $iconset-version: 1);
+			@include oIconsGetIcon('search', oBrandGet('o-header', 'transparency'), $_o-header-icon-size-large, $apply-base-styles: false, $apply-width-height: false, $iconset-version: 1);
 		}
 
 		.o-header__top-link--myft:before {
-			@include oHeaderBrandImage('brand-myft', oColorsGetColorFor('o-header-transparent-icon'), 52);
+			@include oHeaderBrandImage('brand-myft', oBrandGet('o-header', 'transparency'), 52);
 		}
 
 		.o-header__top-logo {
-			@include oHeaderBrandImage('brand-ft-masthead', oColorsGetColorFor('o-header-transparent-icon'), 500);
+			@include oHeaderBrandImage('brand-ft-masthead', oBrandGet('o-header', 'transparency'), 500);
 		}
 
 		.o-header__nav-button {
@@ -31,23 +31,23 @@
 		.o-header__nav-link,
 		.o-header__anon-link {
 			&:hover {
-				color: oColorsGetColorFor('o-header-transparent-link-hover', 'text');
+				color: oBrandGet('o-header', 'transparency');
 			}
 
 			&:hover:after {
-				background-color: oColorsGetColorFor('o-header-transparent-link-hover', 'text');
+				background-color: oBrandGet('o-header', 'transparency');
 			}
 
 			&--highlight,
 			&[aria-selected="true"], // deprecated
 			&[aria-current] {
-				color: oColorsGetColorFor('o-header-transparent-link-highlight', 'text');
+				color: oBrandGet('o-header', 'transparency');
 			}
 
 			&--highlight:after,
 			&[aria-selected="true"]:after, // deprecated
 			&[aria-current]:after {
-				background-color: oColorsGetColorFor('o-header-transparent-link-highlight', 'text');
+				background-color: oBrandGet('o-header', 'transparency');
 			}
 		}
 	}

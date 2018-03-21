@@ -333,7 +333,6 @@
 	}
 
 	.o-header__drawer-menu-link--selected {
-		// @include oColorsFor(o-header-drawer-menu-link-selected);
 		color: oBrandGet('o-header', 'drawer-menu-selected-link-text');
 		background-color: oBrandGet('o-header', 'drawer-menu-selected-link-background');
 
