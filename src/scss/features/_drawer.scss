@@ -1,7 +1,8 @@
 @mixin oHeaderDrawer() {
 	// added to the document element, see n-ui/layout
 	.o-header__drawer {
-		@include oColorsFor(o-header-drawer, background);
+		background-color: oBrandGet('o-header', 'drawer-background');
+		// @include oColorsFor(o-header-drawer, background);
 		font-family: $o-typography-sans;
 
 		&[data-o-header-drawer--js] {
@@ -11,7 +12,7 @@
 			left: 0;
 			z-index: $_o-header-drawer-z-index;
 			width: 100%;
-			border-right: 1px solid oColorsGetColorFor(o-header-drawer, border);
+			border-right: 1px solid oBrandGet('o-header', 'drawer-border');
 			// use a 2D transform because 3D are unsupported by IE9
 			// sass-lint:disable no-duplicate-properties
 			transform: translateX(-100%);
@@ -137,7 +138,7 @@
 
 		&[aria-selected="true"], // deprecated
 		&[aria-current] {
-			@include oColorsFor(o-header-drawer-editions-link-highlight, text);
+			color: oBrandGet('o-header', 'drawer-editions-link-highlight');
 			font-weight: 600;
 			text-decoration: none;
 			pointer-events: none;
@@ -171,16 +172,18 @@
 	}
 
 	.o-header__drawer-search-term {
-		@include oColorsFor(o-header-drawer-search-term);
+		background-color: oBrandGet('o-header', 'drawer-search-term-background');
+		border-color: oBrandGet('o-header', 'drawer-search-term-border');
 		flex-grow: 1;
 
-		&:focus {
-			@include oColorsFor(o-header-drawer-search-term-highlight);
+		&:focus { //currently overriden by o-normalise
+			border-color: oBrandGet('o-header', 'drawer-search-term-highlight-border');
 		}
 	}
 
 	.o-header__drawer-search-submit {
-		@include oColorsFor(o-header-drawer-search-submit);
+		background-color: oBrandGet('o-header', 'drawer-search-submit-background');
+		border-color: oBrandGet('o-header', 'drawer-search-submit-border');
 
 		&:after {
 			@include oIconsGetIcon('search', oColorsGetPaletteColor('white'), $_o-header-icon-size, $iconset-version: 1);
@@ -193,13 +196,15 @@
 	// Lists
 	//
 	.o-header__drawer-menu {
-		@include oColorsFor(o-header-drawer-menu);
+		// @include oColorsFor(o-header-drawer-menu);
+		color: oBrandGet('o-header', 'drawer-menu-text');
+		border-color: oBrandGet('o-header', 'drawer-menu-border');
 	}
 
 	.o-header__drawer-menu--user {
-		@include oColorsFor(o-header-drawer-menu-user, background);
+		background-color: oBrandGet('o-header', 'drawer-menu-user-background');
 		padding-bottom: $_o-header-drawer-padding-y;
-		border-top: 1px solid oColorsGetColorFor(o-header-drawer-menu-user, border);
+		border-top: 1px solid oBrandGet('o-header', 'drawer-menu-user-border');
 	}
 
 	.o-header__drawer-menu-list {
@@ -222,13 +227,14 @@
 			transition: max-height 0.25s ease-out;
 
 			&[aria-hidden="false"] {
-				@include oColorsFor(o-header-drawer-menu-list, background);
+				// @include oColorsFor(o-header-drawer-menu-list, background);
+				background-color: oBrandGet('o-header', 'drawer-menu-list-background');
 				// magic number... you can't transition between 0 and unknown
 				// but as long as this is larger than the content it will do
 				max-height: 600px;
 				visibility: visible;
 				// a border would create some flickery layout
-				box-shadow: inset 0 -1px 0 oColorsGetColorFor(o-header-drawer-menu, border), inset 0 1px 0 oColorsGetColorFor(o-header-drawer-menu, border);
+				box-shadow: inset 0 -1px 0 oBrandGet('o-header', 'drawer-menu-border'), inset 0 1px 0 oColorsGetColorFor(o-header-drawer-menu, border);
 			}
 		}
 	}
@@ -238,11 +244,11 @@
 	}
 
 	.o-header__drawer-menu-item--divide {
-		border-top: 2px solid oColorsGetColorFor(o-header-drawer-menu, border);
+		border-top: 2px solid oBrandGet('o-header', 'drawer-menu-border');;
 	}
 
 	.o-header__drawer-menu-item--heading {
-		@include oColorsFor(o-header-drawer-menu-item);
+		background-color: oBrandGet('o-header', 'drawer-menu-item-background');
 		padding: ($_o-header-drawer-padding-x / 2) $_o-header-drawer-padding-x;
 		font-weight: 600;
 	}
@@ -291,18 +297,18 @@
 	}
 
 	.o-header__drawer-menu-toggle--selected {
-		background: rgba(oColorsGetColorFor(o-header-drawer-toggle-selected, background), 0.25);
+		background: rgba(oBrandGet('o-header', 'drawer-selected-toggle-background'), 0.25);
 
 		&:before {
-			@include oIconsGetIcon('arrow-down', oColorsGetColorFor(o-header-drawer-toggle-selected, text), $_o-header-icon-size, $iconset-version: 1);
+			@include oIconsGetIcon('arrow-down', oBrandGet('o-header', 'drawer-selected-toggle-text'), $_o-header-icon-size, $iconset-version: 1);
 		}
 	}
 
 	.o-header__drawer-menu-toggle--unselected {
-		background: rgba(oColorsGetColorFor(o-header-drawer-toggle-unselected, background), 0.85);
+		background: rgba(oBrandGet('o-header', 'drawer-unselected-toggle-background'), 0.85);
 
 		&:before {
-			@include oIconsGetIcon('arrow-down', oColorsGetColorFor(o-header-drawer-toggle-unselected, text), $_o-header-icon-size, $iconset-version: 1);
+			@include oIconsGetIcon('arrow-down', oBrandGet('o-header', 'drawer-unselected-toggle-text'), $_o-header-icon-size, $iconset-version: 1);
 		}
 	}
 
@@ -310,7 +316,7 @@
 	// Links
 	//
 	.o-header__drawer-menu-link {
-		@include oColorsFor(o-header-drawer-menu-link, text);
+		color: oBrandGet('o-header', 'drawer-menu-link-text');
 		display: block;
 		padding: $_o-header-drawer-padding-y $_o-header-drawer-padding-x;
 		border-bottom: 0;
@@ -318,27 +324,29 @@
 		text-decoration: none;
 
 		&:hover {
-			@include oColorsFor(o-header-drawer-menu-link-hover, text);
-			color: getColor('teal-40');
+			color: oBrandGet('o-header', 'drawer-menu-link-hover-text');
 		}
 
 		[aria-expanded="true"] + & {
-			@include oColorsFor(o-header-drawer-menu-link, background);
+			background-color: oBrandGet('o-header', 'drawer-menu-link-background');
 		}
 	}
 
 	.o-header__drawer-menu-link--selected {
-		@include oColorsFor(o-header-drawer-menu-link-selected);
+		// @include oColorsFor(o-header-drawer-menu-link-selected);
+		color: oBrandGet('o-header', 'drawer-menu-selected-link-text');
+		background-color: oBrandGet('o-header', 'drawer-menu-selected-link-background');
 
 		&:hover,
 		&:focus {
-			@include oColorsFor(o-header-drawer-menu-link-hover-selected, text);
-			outline-color: oColorsGetColorFor('o-header-drawer-menu', 'text');
+			color: oBrandGet('o-header', 'drawer-menu-selected-link-hover-text');
+			//also overriden by o-normalise
+			outline-color: oBrandGet('o-header', 'drawer-menu-text');
 		}
 
 		[aria-expanded="true"] + & {
-			// speceficity
-			@include oColorsFor(o-header-drawer-menu-link-selected, background);
+			// specificity
+			background-color: oBrandGet('o-header', 'drawer-menu-selected-link-background');
 		}
 	}
 

@@ -36,13 +36,13 @@
 	border: 0;
 
 	&:hover {
-		color: oColorsGetColorFor('o-header-link-hover', 'text');
+		color: oBrandGet('o-header', 'link-hover-text');
 	}
 
 	&--highlight,
 	&[aria-selected="true"], // deprecated
 	&[aria-current] {
-		color: oColorsGetColorFor('o-header-link-highlight', 'text');
+		color: oBrandGet('o-header', 'link-highlight-text');
 	}
 }
 
@@ -63,13 +63,13 @@
 	}
 
 	&:hover:after {
-		background-color: oColorsGetColorFor('o-header-link-hover', 'text');
+		background-color: oBrandGet('o-header', 'link-hover-text');
 	}
 
 	&--highlight:after,
 	&[aria-selected="true"]:after, // deprecated
 	&[aria-current]:after {
-		background-color: oColorsGetColorFor('o-header-link-highlight', 'text');
+		background-color: oBrandGet('o-header', 'link-highlight-text');
 	}
 }
 
@@ -94,7 +94,7 @@
 		top: 15%;
 		left: 0;
 		height: percentage($_o-header-item-separator-percentage-height);
-		border-left: $border-width solid oColorsGetColorFor('o-header', 'border');
+		border-left: $border-width solid oBrandGet('o-header', 'header-border');
 	}
 }
 
