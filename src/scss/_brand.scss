@@ -1,0 +1,50 @@
+@include oBrandDefine('o-header', 'master', (
+	'variables': (
+		header-text: oColorsGetPaletteColor('black-80'),
+		header-border: oColorsGetPaletteColor('black-20'),
+		header-background: oColorsGetPaletteColor('paper'),
+		header-icon: oColorsGetPaletteColor('black-80'),
+		link-hover-text: oColorsGetPaletteColor('black-20'),
+		link-highlight-text: oColorsGetPaletteColor('teal-40'),
+
+		transparent-header: oColorsGetPaletteColor('white'),
+
+		search-border: oColorsGetPaletteColor('teal-40'),
+		search-background: oColorsGetPaletteColor('black-20'),
+
+		mega-header-background: oColorsGetPaletteColor('white-60'),
+
+		subnav-background: oColorsGetPaletteColor('white-60'),
+		subnav-border: oColorsGetPaletteColor('black-20'),
+		subnav-link: oColorsGetPaletteColor('black-80'),
+		subnav-button: oColorsGetPaletteColor('black-80'),
+		subnav-button-background: oColorsGetPaletteColor('black-10'),
+		subnav-button-hover-background: oColorsGetPaletteColor('black-20'),
+
+		drawer-background: oColorsGetPaletteColor('paper'),
+		drawer-border: oColorsGetPaletteColor('black-20'),
+		drawer-editions-link: oColorsGetPaletteColor('teal-40'),
+		drawer-editions-link-higlight: oColorsGetPaletteColor('black-70'),
+		drawer-search-term-background: oColorsGetPaletteColor('white'),
+		drawer-search-term-border: oColorsGetPaletteColor('black-20'),
+		drawer-search-term-highlight-border: oColorsGetPaletteColor('teal-40'),
+		drawer-search-submit-background: oColorsGetPaletteColor('teal-40'),
+		drawer-search-submit-border: oColorsGetPaletteColor('transparent'),
+		drawer-menu-text: oColorsGetPaletteColor('black-80'),
+		drawer-menu-border: oColorsGetPaletteColor('black-10'),
+		drawer-menu-user-background: oColorsGetPaletteColor('black-10'),
+		drawer-menu-user-border: oColorsGetPaletteColor('black-20'),
+		drawer-menu-list-background: oColorsGetPaletteColor('white-60'),
+		drawer-menu-link-text: oColorsGetPaletteColor('inherit'),
+		drawer-menu-link-background: oColorsGetPaletteColor('white-60'),
+		drawer-menu-link-hover-text: oColorsGetPaletteColor('teal-40'),
+		drawer-menu-selected-link-text: oColorsGetPaletteColor('white'),
+		drawer-menu-selected-link-background: oColorsGetPaletteColor('teal-40'),
+		drawer-menu-selected-link-hover-text: oColorsGetPaletteColor('white-60'),
+		drawer-menu-item-background: oColorsGetPaletteColor('black-10'),
+		drawer-selected-toggle-text: oColorsGetPaletteColor('white'),
+		drawer-selected-toggle-background: oColorsGetPaletteColor('white'),
+		drawer-unselected-toggle-text: oColorsGetPaletteColor('teal-40'),
+		drawer-unselected-toggle-background: oColorsGetPaletteColor('black-10')
+	)
+));

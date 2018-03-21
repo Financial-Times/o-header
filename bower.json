@@ -8,7 +8,8 @@
     "o-toggle": "^1.0.0",
     "o-typography": "^5.0.1",
     "o-utils": "^1.0.0",
-    "o-visual-effects": "^2.0.0"
+    "o-visual-effects": "^2.0.0",
+    "o-brand": "^1.1.2"
   },
   "main": [
     "main.scss",
