@@ -1,3 +1,7 @@
+@function oHeaderGetColor($property) {
+	@return oBrandGet('o-header', $property);
+}
+
 @include oBrandDefine('o-header', 'master', (
 	'variables': (
 		header-text: oColorsGetPaletteColor('black-80'),
