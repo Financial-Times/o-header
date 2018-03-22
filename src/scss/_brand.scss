@@ -1,7 +1,3 @@
-@function oHeaderGetColor($property) {
-	@return oBrandGet('o-header', $property);
-}
-
 @include oBrandDefine('o-header', 'master', (
 	'variables': (
 		header-text: oColorsGetPaletteColor('black-80'),
@@ -50,6 +46,9 @@
 		drawer-selected-toggle-background: oColorsGetPaletteColor('white'),
 		drawer-unselected-toggle-text: oColorsGetPaletteColor('teal-40'),
 		drawer-unselected-toggle-background: oColorsGetPaletteColor('black-10')
+	),
+	'settings': (
+		'transparent': true
 	)
 ));
 
@@ -98,5 +97,8 @@
 		drawer-selected-toggle-background: oColorsGetPaletteColor('white'),
 		drawer-unselected-toggle-text: oColorsGetPaletteColor('slate'),
 		drawer-unselected-toggle-background: oColorsGetPaletteColor('slate-white-15')
+	),
+	'settings': (
+		'transparent': false
 	)
 ));
