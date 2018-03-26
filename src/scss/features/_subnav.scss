@@ -115,6 +115,14 @@
 			}
 		}
 
+		.o-header__subnav-link--right {
+			float: right;
+			display: none;
+			@include oGridRespondTo('M') {
+				display: block;
+			}
+		}
+
 		.o-header__subnav-button {
 			@include oIconsGetIcon('arrow-left', oBrandGet('subnav-button-text'), $_o-header-icon-size, $apply-width-height: false, $iconset-version: 1);
 			background-color: oBrandGet('subnav-button-background');
@@ -150,4 +158,4 @@
 			transform: rotate(180deg);
 		}
 	}
-};
+}
