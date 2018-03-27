@@ -102,7 +102,7 @@
 
 		.o-header__drawer-tools-close {
 			// dividing by 1px removes the unit
-			@include oIconsGetIcon('cross', oColorsGetPaletteColor('black-80'), $_o-header-icon-size-large, $iconset-version: 1);
+			@include oIconsGetIcon('cross', oBrandGet('drawer-tools-close'), $_o-header-icon-size-large, $iconset-version: 1);
 			float: right;
 			border: 0;
 			opacity: 0.75;
