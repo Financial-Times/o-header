@@ -77,7 +77,9 @@ function addDrawerToggles (drawerEl) {
 	function toggleCallback (state, e) {
 		if (state === 'close') {
 			toggleTabbing(drawerEl, false);
+			
 			handleClose.removeEvents();
+
 			openingControl.focus();
 		} else {
 			toggleTabbing(drawerEl, true);
