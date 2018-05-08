@@ -13,11 +13,7 @@
 				overflow: hidden;
 				// height *needs* setting so we can hide scrollbars.
 				// This is the content height of .o-header__subnav-content
-				height: $_o-header-subhav-height-base;
-
-				@include oGridRespondTo('M') {
-					height: $_o-header-subhav-height-medium;
-				}
+				height: $_o-header-subhav-height-medium;
 			}
 		}
 
@@ -72,6 +68,10 @@
 			display: inline-block;
 			padding-left: 6px;
 
+			.o-header__subnav-list--children & {
+				padding-left: 16px;
+			}
+			
 			&:first-child {
 				// align left side correctly
 				padding-left: 0;
@@ -97,11 +97,7 @@
 			@include oHeaderFancyLink;
 			color: oBrandGet('subnav-link');
 			display: inline-block;
-			padding: 14px 0;
-
-			@include oGridRespondTo('M') {
-				padding: 8px 0;
-			}
+			padding: 8px 0;
 
 			.o-header__subnav-list--breadcrumb & {
 				color: oBrandGet('link-highlight-text');
