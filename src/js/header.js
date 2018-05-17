@@ -27,10 +27,6 @@ class Header {
 
 		this.headerEl.removeAttribute('data-o-header--no-js');
 		this.headerEl.setAttribute('data-o-header--js', '');
-
-		setTimeout(() => {
-			document.querySelector('[aria-current]').scrollIntoView();
-		}, 1000);
 	}
 
 	static init (rootEl) {
