@@ -474,7 +474,8 @@
 			},
 			{
 				"name": "US Companies",
-				"href": "#"
+				"href": "#",
+				"selected": true
 			}
 		]
 	}
