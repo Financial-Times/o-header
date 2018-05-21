@@ -48,14 +48,16 @@ function init(headerEl) {
 	}
 
 	function scrollToCurrent() {
-		let currentSelectionEnd =
-			wrapper.querySelector('[aria-current]')
-			&& wrapper.querySelector('[aria-current]').getBoundingClientRect().right;
+		const currentSelection = wrapper.querySelector('[aria-current]');
 
-		let wrapperWidth = wrapper.getBoundingClientRect().width;
+		if(currentSelection) {
+			let currentSelectionEnd = wrapper.querySelector('[aria-current]').getBoundingClientRect().right;
 
-		if (currentSelectionEnd > wrapperWidth) {
-			wrapper.scrollTo(currentSelectionEnd, 0);
+			let wrapperWidth = wrapper.getBoundingClientRect().width;
+
+			if (currentSelectionEnd > wrapperWidth) {
+				wrapper.scrollTo(currentSelectionEnd, 0);
+			}
 		}
 	}
 
