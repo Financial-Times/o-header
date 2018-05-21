@@ -48,7 +48,10 @@ function init(headerEl) {
 	}
 
 	function scrollToCurrent() {
-		let currentSelectionEnd = wrapper.querySelector('[aria-current]').getBoundingClientRect().right;
+		let currentSelectionEnd =
+			wrapper.querySelector('[aria-current]')
+			&& wrapper.querySelector('[aria-current]').getBoundingClientRect().right;
+
 		let wrapperWidth = wrapper.getBoundingClientRect().width;
 
 		if (currentSelectionEnd > wrapperWidth) {
