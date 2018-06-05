@@ -1,28 +1,28 @@
 @mixin oHeaderTransparent() {
-	@include oBrandConfigureFor('o-header') {
+	@include oBrandConfigureFor('o-header', 'transparent') {
 
 		.o-header--transparent {
-			border-color: rgba(oBrandGet('transparency'), 0.4);
-			background-color: transparent;
+			border-color: oBrandGet('header-border');
+			background-color: oBrandGet('header-background');
 
 			.o-header__row {
-				border-bottom-color: rgba(oBrandGet('transparency'), 0.4);
+				border-bottom-color: oBrandGet('header-border');
 			}
 
 			.o-header__top-link--menu:before {
-				@include oIconsGetIcon('hamburger', oBrandGet('transparency'), $_o-header-icon-size-large, $apply-base-styles: false, $apply-width-height: false, $iconset-version: 1);
+				@include oIconsGetIcon('hamburger', oBrandGet('header-icon'), $_o-header-icon-size-large, $apply-base-styles: false, $apply-width-height: false, $iconset-version: 1);
 			}
 
 			.o-header__top-link--search:before {
-				@include oIconsGetIcon('search', oBrandGet('transparency'), $_o-header-icon-size-large, $apply-base-styles: false, $apply-width-height: false, $iconset-version: 1);
+				@include oIconsGetIcon('search', oBrandGet('header-icon'), $_o-header-icon-size-large, $apply-base-styles: false, $apply-width-height: false, $iconset-version: 1);
 			}
 
 			.o-header__top-link--myft:before {
-				@include oHeaderBrandImage('brand-myft', oBrandGet('transparency'), 52);
+				@include oHeaderBrandImage('brand-myft', oBrandGet('header-icon'), 52);
 			}
 
 			.o-header__top-logo {
-				@include oHeaderBrandImage('brand-ft-masthead', oBrandGet('transparency'), 500);
+				@include oHeaderBrandImage('brand-ft-masthead', oBrandGet('header-icon'), 500);
 			}
 
 			.o-header__nav-button {
@@ -32,23 +32,23 @@
 			.o-header__nav-link,
 			.o-header__anon-link {
 				&:hover {
-					color: oBrandGet('transparency');
+					color: oBrandGet('link-hover-text');
 				}
 
 				&:hover:after {
-					background-color: oBrandGet('transparency');
+					background-color: oBrandGet('link-hover-text');
 				}
 
 				&--highlight,
 				&[aria-selected="true"], // deprecated
 				&[aria-current] {
-					color: oBrandGet('transparency');
+					color: oBrandGet('link-highlight-text');
 				}
 
 				&--highlight:after,
 				&[aria-selected="true"]:after, // deprecated
 				&[aria-current]:after {
-					background-color: oBrandGet('transparency');
+					background-color: oBrandGet('link-highlight-text');
 				}
 			}
 		}

@@ -94,7 +94,7 @@
 
 		.o-header__drawer-tools-logo {
 			@include oIconsBaseStyles;
-			@include oHeaderBrandImage('brand-ft-masthead', oColorsGetPaletteColor('black-80'), 210);
+			@include oHeaderBrandImage('brand-ft-masthead', oBrandGet('header-icon'), 210);
 			width: 210px;
 			height: 18px;
 			border-bottom: 0;

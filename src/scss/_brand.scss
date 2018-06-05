@@ -48,7 +48,11 @@
 		drawer-unselected-toggle-text: oColorsGetPaletteColor('teal-40'),
 		drawer-unselected-toggle-background: oColorsGetPaletteColor('black-10'),
 		'transparent': (
-			transparency: oColorsGetPaletteColor('white'),
+			header-border: rgba(oColorsGetPaletteColor('white'), 0.4),
+			header-background: oColorsGetPaletteColor('transparent'),
+			header-icon: oColorsGetPaletteColor('white'),
+			link-hover-text: oColorsGetPaletteColor('white'),
+			link-highlight-text: oColorsGetPaletteColor('white'),
 		)
 	),
 	'settings': (
@@ -64,7 +68,6 @@
 		header-icon: oColorsGetPaletteColor('black-80'),
 		link-hover-text: oColorsGetPaletteColor('black-80'),
 		link-highlight-text: oColorsGetPaletteColor('slate'),
-		transparency: oColorsGetPaletteColor('white'),
 		search-border: oColorsGetPaletteColor('teal-40'),
 		search-background: oColorsGetPaletteColor('black-20'),
 		mega-menu-background: oColorsGetPaletteColor('white-60'),
@@ -105,7 +108,5 @@
 		drawer-unselected-toggle-text: oColorsGetPaletteColor('slate'),
 		drawer-unselected-toggle-background: oColorsGetPaletteColor('slate-white-15')
 	),
-	'settings': (
-		'transparent': false
-	)
+	'settings': ()
 ));

@@ -25,9 +25,7 @@
 	} @else if $feature == 'subbrand' {
 		@include oHeaderSubbrand;
 	} @else if $feature == 'transparent' {
-		@include oBrandConfigureFor('o-header', 'transparent') {
-			@include oHeaderTransparent;
-		};
+		@include oHeaderTransparent;
 	}
 }
 
