@@ -1,3 +1,15 @@
+/// Helper `o-brand` wrapper.
+/// @access private
+@function _oHeaderGet($variables, $from: null) {
+	@return oBrandGet($component: 'o-header',  $variables: $variables, $from: $from);
+}
+
+/// Helper `o-brand` wrapper.
+/// @access private
+@function _oHeaderSupports($variant) {
+	@return oBrandSupportsVariant($component: 'o-header', $variant: $variant);
+}
+
 @include oBrandDefine('o-header', 'master', (
 	'variables': (
 		header-text: oColorsGetPaletteColor('black-80'),
@@ -55,8 +67,17 @@
 			link-highlight-text: oColorsGetPaletteColor('white'),
 		)
 	),
-	'settings': (
-		'transparent': true
+	'supports-variants': (
+		'transparent': true,
+		'subnav': true,
+		'search': true,
+		'nav': true,
+		'anon': true,
+		'drawer': true,
+		'megamenu': true,
+		'sticky': true,
+		'simple': true,
+		'subbrand': true
 	)
 ));
 
@@ -108,5 +129,15 @@
 		drawer-unselected-toggle-text: oColorsGetPaletteColor('slate'),
 		drawer-unselected-toggle-background: oColorsGetPaletteColor('slate-white-15')
 	),
-	'settings': ()
+	'supports-variants': (
+		'subnav': true,
+		'search': true,
+		'nav': true,
+		'anon': true,
+		'drawer': true,
+		'megamenu': true,
+		'sticky': true,
+		'simple': true,
+		'subbrand': true
+	)
 ));

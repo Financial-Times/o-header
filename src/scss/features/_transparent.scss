@@ -1,55 +1,52 @@
 @mixin oHeaderTransparent() {
-	@include oBrandConfigureFor('o-header', 'transparent') {
+	.o-header--transparent {
+		border-color: _oHeaderGet('header-border', $from: 'transparent');
+		background-color: _oHeaderGet('header-background', $from: 'transparent');
 
-		.o-header--transparent {
-			border-color: oBrandGet('header-border');
-			background-color: oBrandGet('header-background');
+		.o-header__row {
+			border-bottom-color: _oHeaderGet('header-border', $from: 'transparent');
+		}
 
-			.o-header__row {
-				border-bottom-color: oBrandGet('header-border');
+		.o-header__top-link--menu:before {
+			@include oIconsGetIcon('hamburger', _oHeaderGet('header-icon', $from: 'transparent'), $_o-header-icon-size-large, $apply-base-styles: false, $apply-width-height: false, $iconset-version: 1);
+		}
+
+		.o-header__top-link--search:before {
+			@include oIconsGetIcon('search', _oHeaderGet('header-icon', $from: 'transparent'), $_o-header-icon-size-large, $apply-base-styles: false, $apply-width-height: false, $iconset-version: 1);
+		}
+
+		.o-header__top-link--myft:before {
+			@include oHeaderBrandImage('brand-myft', _oHeaderGet('header-icon', $from: 'transparent'), 52);
+		}
+
+		.o-header__top-logo {
+			@include oHeaderBrandImage('brand-ft-masthead', _oHeaderGet('header-icon', $from: 'transparent'), 500);
+		}
+
+		.o-header__nav-button {
+			@include oButtons($theme: 'inverse');
+		}
+
+		.o-header__nav-link,
+		.o-header__anon-link {
+			&:hover {
+				color: _oHeaderGet('link-hover-text', $from: 'transparent');
 			}
 
-			.o-header__top-link--menu:before {
-				@include oIconsGetIcon('hamburger', oBrandGet('header-icon'), $_o-header-icon-size-large, $apply-base-styles: false, $apply-width-height: false, $iconset-version: 1);
+			&:hover:after {
+				background-color: _oHeaderGet('link-hover-text', $from: 'transparent');
 			}
 
-			.o-header__top-link--search:before {
-				@include oIconsGetIcon('search', oBrandGet('header-icon'), $_o-header-icon-size-large, $apply-base-styles: false, $apply-width-height: false, $iconset-version: 1);
+			&--highlight,
+			&[aria-selected="true"], // deprecated
+			&[aria-current] {
+				color: _oHeaderGet('link-highlight-text', $from: 'transparent');
 			}
 
-			.o-header__top-link--myft:before {
-				@include oHeaderBrandImage('brand-myft', oBrandGet('header-icon'), 52);
-			}
-
-			.o-header__top-logo {
-				@include oHeaderBrandImage('brand-ft-masthead', oBrandGet('header-icon'), 500);
-			}
-
-			.o-header__nav-button {
-				@include oButtons($theme: 'inverse');
-			}
-
-			.o-header__nav-link,
-			.o-header__anon-link {
-				&:hover {
-					color: oBrandGet('link-hover-text');
-				}
-
-				&:hover:after {
-					background-color: oBrandGet('link-hover-text');
-				}
-
-				&--highlight,
-				&[aria-selected="true"], // deprecated
-				&[aria-current] {
-					color: oBrandGet('link-highlight-text');
-				}
-
-				&--highlight:after,
-				&[aria-selected="true"]:after, // deprecated
-				&[aria-current]:after {
-					background-color: oBrandGet('link-highlight-text');
-				}
+			&--highlight:after,
+			&[aria-selected="true"]:after, // deprecated
+			&[aria-current]:after {
+				background-color: _oHeaderGet('link-highlight-text', $from: 'transparent');
 			}
 		}
 	}

@@ -5,7 +5,6 @@
 
 /// Includes the correct mixin based on the row passed
 @mixin _oHeaderGetFeatureMixin($feature) {
-
 	@if $feature == 'anon' {
 		@include oHeaderAnon;
 	} @else if $feature == 'subnav' {
