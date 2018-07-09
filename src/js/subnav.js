@@ -25,6 +25,7 @@ function init(headerEl) {
 			if (direction(button) === 'left') {
 				button.disabled = wrapper.scrollLeft === 0;
 			} else {
+				button.disabled = true;
 				const remaining = scrollWidth - clientWidth - wrapper.scrollLeft;
 				// Allow a little difference as scrollWidth is fast, not accurate.
 				button.disabled = remaining <= 1;
@@ -68,7 +69,6 @@ function init(headerEl) {
 		button.onclick = scroll;
 	});
 
-	scrollable();
 	scrollToCurrent();
 }
 
