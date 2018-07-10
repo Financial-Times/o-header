@@ -470,11 +470,11 @@
 			},
 			{
 				"name": "US Politics & Policy",
-				"href": "#",
-				"selected": true
+				"href": "#"
 			},
 			{
 				"name": "US Companies",
+				"selected": true,
 				"href": "#"
 			}
 		]
