@@ -8,18 +8,15 @@ function init(headerEl) {
 	}
 
 	const buttons = Array.from(subnav.getElementsByTagName('button'));
-
 	const wrapper = subnav.querySelector('[data-o-header-subnav-wrapper]');
-	const content = subnav.querySelector('.o-header__subnav-content')
 
+	let scrollWidth;
 	let wrapperWidth = wrapper.clientWidth;
-	let contentWidth = content.clientWidth;
 
 	function checkCurrentPosition() {
-		//get current selection
 		const currentSelection = wrapper.querySelector('[aria-current]');
 		if (currentSelection) {
-			let currentSelectionEnd =  currentSelection.getBoundingClientRect().right;
+			let currentSelectionEnd = currentSelection.getBoundingClientRect().right;
 
 			//if current selection is within wrapper bounds don't scroll, but show scroll options
 			if (currentSelectionEnd < wrapperWidth) {
@@ -37,7 +34,7 @@ function init(headerEl) {
 	}
 
 	function scrollable() {
-		let scrollWidth = wrapper.scrollWidth;
+		scrollWidth = wrapper.scrollWidth;
 
 		buttons.forEach(button => {
 			if (direction(button) === 'left') {
