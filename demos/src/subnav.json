@@ -465,13 +465,13 @@
 		],
 		"children": [
 			{
-				"name": "US Economyaki",
-				"selected": true,
+				"name": "US Economy",
 				"href": "#"
 			},
 			{
 				"name": "US Politics & Policy",
-				"href": "#"
+				"href": "#",
+				"selected": true
 			},
 			{
 				"name": "US Companies",

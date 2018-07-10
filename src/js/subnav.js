@@ -8,7 +8,7 @@ function init(headerEl) {
 	}
 
 	const buttons = Array.from(subnav.getElementsByTagName('button'));
-	const wrapper = window.w = subnav.querySelector('[data-o-header-subnav-wrapper]');
+	const wrapper = subnav.querySelector('[data-o-header-subnav-wrapper]');
 
 	let scrollWidth;
 	let wrapperWidth = wrapper.clientWidth;
