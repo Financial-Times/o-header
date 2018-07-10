@@ -17,15 +17,11 @@ function init(headerEl) {
 		const currentSelection = wrapper.querySelector('[aria-current]');
 		if (currentSelection) {
 			let currentSelectionEnd = currentSelection.getBoundingClientRect().right;
-
-			//if current selection is within wrapper bounds don't scroll, but show scroll options
-			if (currentSelectionEnd < wrapperWidth) {
-				scrollable();
-			// if current selection is not within wrapper bounds, scroll to it, _then_ show scroll options
-			} else {
+			if (currentSelectionEnd > wrapperWidth) {
 				wrapper.scrollTo(currentSelectionEnd, 0);
-				scrollable();
 			}
+
+			scrollable();
 		}
 	}
 
