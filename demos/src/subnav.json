@@ -465,7 +465,8 @@
 		],
 		"children": [
 			{
-				"name": "US Economy",
+				"name": "US Economyaki",
+				"selected": true,
 				"href": "#"
 			},
 			{
@@ -474,7 +475,6 @@
 			},
 			{
 				"name": "US Companies",
-				"selected": true,
 				"href": "#"
 			}
 		]
