@@ -73,8 +73,7 @@ function init(headerEl) {
 		button.onclick = scroll;
 	});
 
-	//Let nav content and selection load before we decide how scrolling should behave
-	setTimeout(checkCurrentPosition, 500);
+	checkCurrentPosition();
 }
 
 export default { init };
