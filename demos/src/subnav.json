@@ -30,7 +30,7 @@
 			{
 				"name": "World",
 				"url": "#",
-				"selected": true
+				"selected": false
 			},
 			{
 				"name": "UK",
@@ -471,7 +471,7 @@
 			{
 				"name": "US Politics & Policy",
 				"href": "#",
-				"selected": true
+				"selected": false
 			},
 			{
 				"name": "US Companies",
