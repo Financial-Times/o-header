@@ -4,6 +4,10 @@
 		background-color: _oHeaderGet('drawer-background');
 		font-family: $o-typography-sans;
 
+		// The README and demos say to include ".o--if-js".
+		// ".core .o--if-js" may be repalced with ".enhanced .o--if-js" before "data-o-header-drawer--js" is added.
+		// This causes a flash where the draw is rendered before being positioned.
+		@at-root .enhanced .o--if-js &,
 		&[data-o-header-drawer--js] {
 			position: fixed;
 			top: 0;
