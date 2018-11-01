@@ -91,6 +91,7 @@
 
 /// Applies styles to hide an element accessibly,
 /// allowing the content to be read by screenreaders.
+/// @deprecated
 @mixin oHeaderVisuallyHidden() {
 	@warn 'This mixin has been deprecated, and will be removed in the next major.';
 	@include oNormaliseVisuallyHidden;
