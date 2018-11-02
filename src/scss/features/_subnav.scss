@@ -12,7 +12,7 @@
 			overflow: hidden;
 			// height *needs* setting so we can hide scrollbars.
 			// This is the content height of .o-header__subnav-content
-			height: $_o-header-subhav-height;
+			height: $_o-header-subnav-height;
 		}
 	}
 
@@ -50,8 +50,8 @@
 				@include _oHeaderItemSeparatorContent();
 				&:before {
 					top: 50%;
-					margin-top: - $_o-header-subhav-height * $_o-header-item-separator-percentage-height / 2;
-					height: $_o-header-subhav-height * $_o-header-item-separator-percentage-height;
+					margin-top: - $_o-header-subnav-height * $_o-header-item-separator-percentage-height / 2;
+					height: $_o-header-subnav-height * $_o-header-item-separator-percentage-height;
 				}
 			}
 		}
