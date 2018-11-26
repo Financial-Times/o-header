@@ -1,7 +1,6 @@
 @mixin oHeaderNav() {
 	.o-header__nav {
 		@include oTypographySans($scale: -1, $line-height: 20px);
-		@include oTypographyProgressiveFontFallback('sans', $scale: -1);
 	}
 
 	.o-header__nav--mobile {
