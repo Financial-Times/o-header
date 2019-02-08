@@ -68,4 +68,4 @@ function init (headerEl) {
 	parents.forEach((parent, i) => addEvents(parent, menus[i]));
 }
 
-export default { init, show, hide };
+export { init, show, hide };

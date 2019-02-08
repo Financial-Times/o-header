@@ -74,4 +74,4 @@ function init(headerEl) {
 	checkCurrentPosition();
 }
 
-export default { init };
+export { init };

@@ -28,4 +28,4 @@ function init (headerEl) {
 	}
 }
 
-export default { init };
+export { init };

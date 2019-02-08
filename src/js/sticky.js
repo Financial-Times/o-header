@@ -67,4 +67,4 @@ function init (headerEl) {
 	handleFrame();
 }
 
-export default { init };
+export { init };
