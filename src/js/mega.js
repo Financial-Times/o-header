@@ -69,3 +69,4 @@ function init (headerEl) {
 }
 
 export { init, show, hide };
+export default { init, show, hide };
