@@ -41,3 +41,10 @@ export {
 	insertTwo,
 	reset
 };
+
+export default {
+	insertOne,
+	insertTwo,
+	reset
+};
+
