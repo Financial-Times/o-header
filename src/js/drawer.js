@@ -175,4 +175,5 @@ function init () {
 	drawerEl.setAttribute('data-o-header-drawer--js', 'true');
 }
 
+export default { init, handleCloseEvents };
 export { init, handleCloseEvents };
