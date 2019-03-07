@@ -1,8 +1,8 @@
 /* eslint-env mocha */
 
-import sinon from 'sinon/pkg/sinon';
-import proclaim from 'proclaim';
-import Drawer from '../src/js/drawer';
+const sinon = require('sinon/pkg/sinon');
+const proclaim = require('proclaim');
+const Drawer = require('../src/js/drawer');
 
 describe('Drawer instance', () => {
 

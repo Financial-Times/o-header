@@ -1,7 +1,7 @@
 /* eslint-env mocha*/
 
-import proclaim from 'proclaim';
-import Header from '../src/js/header';
+const proclaim = require('proclaim');
+const Header = require('../src/js/header');
 
 describe('Header API', () => {
 	it('is defined', () => {

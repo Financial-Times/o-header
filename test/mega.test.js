@@ -1,7 +1,7 @@
 /* eslint-env mocha */
 
-import proclaim from 'proclaim';
-import mega from '../src/js/mega';
+const proclaim = require('proclaim');
+const mega = require('../src/js/mega');
 
 function dispatch (target, type) {
 	target.dispatchEvent(new Event(type, { bubbles: true }));

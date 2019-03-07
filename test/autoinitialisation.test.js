@@ -1,9 +1,9 @@
 /* eslint-env mocha */
 
-import fixtures from './helpers/fixtures';
-import sinon from 'sinon/pkg/sinon';
-import proclaim from 'proclaim';
-import Header from '../main.js';
+const fixtures = require('./helpers/fixtures');
+const sinon = require('sinon/pkg/sinon');
+const proclaim = require('proclaim');
+const Header = require('../main.js');
 
 let pcfEl;
 
