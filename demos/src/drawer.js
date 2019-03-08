@@ -1,4 +1,4 @@
-export default function () {
+module.exports = function () {
 	const editionsData = {
 		current: {
 			name: 'UK',
@@ -392,4 +392,4 @@ export default function () {
 	};
 
 	return drawer;
-}
+};
