@@ -1,5 +1,5 @@
 {
-	"description": "Responsive Financial Times page header with primary and secondary navigation, a drop don mega menu and a collapsible drawer",
+	"description": "Responsive Financial Times page header with primary and secondary navigation, a drop down mega menu, and a collapsible drawer",
 	"keywords": [ "header", "page", "top" ]
 	"origamiType": "module",
 	"origamiCategory": "components",
