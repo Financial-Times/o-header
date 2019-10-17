@@ -44,53 +44,48 @@
 			+ "the following: #{$_o-header-features}";
 		}
 
-		// Error if the current brand does not explicitly support the requested feature.
-		@if not _oHeaderSupports($feature) {
-			@error 'The "#{$feature}" feature of "o-header" is not explicitly supported for the app\'s brand and may lead to unexpected results. Please contact Origami if you would like official support for this feature.';
-		}
-
 		// Output feature.
-		@if $feature == 'top' {
+		@if $feature == 'top' && _oHeaderSupports($feature) {
 			@include _oHeaderTop;
 		}
 
-		@if $feature == 'anon' {
+		@if $feature == 'anon' && _oHeaderSupports($feature) {
 			@include _oHeaderAnon;
 		}
 
-		@if $feature == 'subnav' {
+		@if $feature == 'subnav' && _oHeaderSupports($feature) {
 			@include _oHeaderSubnav;
 		}
 
-		@if $feature == 'search' {
+		@if $feature == 'search' && _oHeaderSupports($feature) {
 			@include _oHeaderSearch;
 		}
 
-		@if $feature == 'nav' {
+		@if $feature == 'nav' && _oHeaderSupports($feature) {
 			@include _oHeaderNav;
 		}
 
-		@if $feature == 'drawer' {
+		@if $feature == 'drawer' && _oHeaderSupports($feature) {
 			@include _oHeaderDrawer;
 		}
 
-		@if $feature == 'megamenu' {
+		@if $feature == 'megamenu' && _oHeaderSupports($feature) {
 			@include _oHeaderMegaMenu;
 		}
 
-		@if $feature == 'sticky' {
+		@if $feature == 'sticky' && _oHeaderSupports($feature) {
 			@include _oHeaderSticky;
 		}
 
-		@if $feature == 'simple' {
+		@if $feature == 'simple' && _oHeaderSupports($feature) {
 			@include _oHeaderSimple;
 		}
 
-		@if $feature == 'subbrand' {
+		@if $feature == 'subbrand' && _oHeaderSupports($feature) {
 			@include _oHeaderSubbrand;
 		}
 
-		@if $feature == 'transparent' {
+		@if $feature == 'transparent' && _oHeaderSupports($feature) {
 			@include _oHeaderTransparent;
 		}
 	}
