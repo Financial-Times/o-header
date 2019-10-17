@@ -25,7 +25,76 @@
 @import 'src/scss/features/sticky';
 @import 'src/scss/features/drawer';
 
-@import 'src/scss/header';
+/// Output the styles for the header.
+/// Can be passed a list of one or more features to output.
+/// By default, will output all styles.
+///
+/// @param {List} $features [('subnav', 'search', 'nav', 'anon', 'drawer', 'megamenu', 'sticky', 'simple', 'subbrand', 'transparent')]
+/// @param {Boolean} $include-base-styles [true]
+@mixin oHeader($features: $_o-header-features, $include-base-styles: true) {
+
+	@if $include-base-styles == true {
+		@include _oHeaderBase;
+	}
+
+	@each $feature in $features {
+		// Check the feature exists.
+		@if index($_o-header-features, $feature) == null {
+			@error "There is no feature '#{$feature}' available in o-header please use one of "
+			+ "the following: #{$_o-header-features}";
+		}
+
+		// Error if the current brand does not explicitly support the requested feature.
+		@if not _oHeaderSupports($feature) {
+			@error 'The "#{$feature}" feature of "o-header" is not explicitly supported for the app\'s brand and may lead to unexpected results. Please contact Origami if you would like official support for this feature.';
+		}
+
+		// Output feature.
+		@if $feature == 'top' {
+			@include _oHeaderTop;
+		}
+
+		@if $feature == 'anon' {
+			@include _oHeaderAnon;
+		}
+
+		@if $feature == 'subnav' {
+			@include _oHeaderSubnav;
+		}
+
+		@if $feature == 'search' {
+			@include _oHeaderSearch;
+		}
+
+		@if $feature == 'nav' {
+			@include _oHeaderNav;
+		}
+
+		@if $feature == 'drawer' {
+			@include _oHeaderDrawer;
+		}
+
+		@if $feature == 'megamenu' {
+			@include _oHeaderMegaMenu;
+		}
+
+		@if $feature == 'sticky' {
+			@include _oHeaderSticky;
+		}
+
+		@if $feature == 'simple' {
+			@include _oHeaderSimple;
+		}
+
+		@if $feature == 'subbrand' {
+			@include _oHeaderSubbrand;
+		}
+
+		@if $feature == 'transparent' {
+			@include _oHeaderTransparent;
+		}
+	}
+}
 
 @if $o-header-is-silent == false {
 	@include oHeader;
