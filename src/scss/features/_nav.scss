@@ -4,27 +4,27 @@
 	}
 
 	.o-header__nav--hide-s {
-		display: none;
 
 		@include oGridRespondTo('S') {
 			display: block;
 		}
+		display: none;
 	}
 
 	.o-header__nav--mobile {
-		white-space: nowrap;
 
 		@include oGridRespondTo('L') {
 			display: none;
 		}
+		white-space: nowrap;
 	}
 
 	.o-header__nav--desktop {
-		display: none;
 
 		@include oGridRespondTo('L') {
 			display: block;
 		}
+		display: none;
 	}
 
 	.o-header__nav-list {
@@ -61,11 +61,11 @@
 	}
 
 	.o-header__nav-item--hide-s {
-		display: none;
 
 		@include oGridRespondTo('S') {
 			display: table-cell;
 		}
+		display: none;
 	}
 
 	.o-header__nav-item--expanded {

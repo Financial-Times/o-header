@@ -30,7 +30,6 @@
 	}
 
 	.o-header__top-takeover {
-		display: none;
 
 		@include oGridRespondTo('L') {
 			display: block;
@@ -41,18 +40,11 @@
 				// sass-lint:enable no-important
 			}
 		}
+		display: none;
 	}
 
 	.o-header__top-link {
 		@include _oHeaderLink;
-		display: inline-block;
-		margin-left: 10px;
-		text-transform: uppercase;
-		font-size: 10px;
-		text-align: center;
-		height: 40px;
-		margin-top: 4px;
-		margin-bottom: 4px;
 
 		@include oGridRespondTo('L') {
 			margin-left: 20px;
@@ -64,6 +56,14 @@
 			margin-top: 24px;
 			margin-bottom: 24px;
 		}
+		display: inline-block;
+		margin-left: 10px;
+		text-transform: uppercase;
+		font-size: 10px;
+		text-align: center;
+		height: 40px;
+		margin-top: 4px;
+		margin-bottom: 4px;
 
 		&:before {
 			@include oIconsContentBaseStyles();
@@ -102,10 +102,6 @@
 	.o-header__top-link--myft {
 		&:before {
 			@include _oHeaderBrandImage('brand-myft', _oHeaderGet('header-icon'), 52);
-			// this is not a very square icon
-			width: 35px;
-			// Remove the negative margin added for new icons which have additional padding
-			margin-top: 0;
 
 			@include oGridRespondTo('M') {
 				width: 44px;
@@ -114,6 +110,10 @@
 			@include oGridRespondTo('L') {
 				width: 52px;
 			}
+			// this is not a very square icon
+			width: 35px;
+			// Remove the negative margin added for new icons which have additional padding
+			margin-top: 0;
 		}
 	}
 
@@ -124,13 +124,6 @@
 	.o-header__top-logo {
 		@include _oHeaderBrandImage('brand-ft-masthead', _oHeaderGet('header-icon'), 500);
 		@include _oHeaderLogoSize('XS');
-
-		display: block;
-		border: 0;
-		margin: 16px auto;
-		background-size: 100% 100%; // Edge SVG background clipped when scaled https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/4705340/
-		background-position: 50%;
-		background-repeat: no-repeat;
 
 		@include oGridRespondTo('S') {
 			@include _oHeaderLogoSize('S');
@@ -147,6 +140,13 @@
 			margin-top: 30px;
 			margin-bottom: 30px;
 		}
+
+		display: block;
+		border: 0;
+		margin: 16px auto;
+		background-size: 100% 100%; // Edge SVG background clipped when scaled https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/4705340/
+		background-position: 50%;
+		background-repeat: no-repeat;
 	}
 
 }
