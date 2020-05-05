@@ -18,10 +18,8 @@
 			width: 100%;
 			border-right: 1px solid _oHeaderGet('drawer-border');
 			// use a 2D transform because 3D are unsupported by IE9
-			// stylelint-disable declaration-block-no-duplicate-properties
 			transform: translateX(-100%);
-			transform: translate3d(-100%, 0, 0);
-			// stylelint-enable declaration-block-no-duplicate-properties
+			transform: translate3d(-100%, 0, 0); // stylelint-disable-line declaration-block-no-duplicate-properties
 
 			// this is literally the spec example for will-change
 			will-change: transform;
@@ -36,10 +34,8 @@
 
 			&[aria-hidden="false"] {
 				// use a 2D transform because 3D are unsupported by IE9
-				// stylelint-disable declaration-block-no-duplicate-properties
 				transform: translateX(0);
-				transform: translate3d(0, 0, 0);
-				// stylelint-enable declaration-block-no-duplicate-properties
+				transform: translate3d(0, 0, 0); // stylelint-disable-line declaration-block-no-duplicate-properties
 			}
 		}
 	}
