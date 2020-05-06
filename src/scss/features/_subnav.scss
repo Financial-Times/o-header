@@ -10,13 +10,13 @@
 		margin-right: -$_o-header-sub-header-focus-margin;
 
 		[data-o-header--js] & {
-			@include oGridRespondTo('M') {
-				height: $_o-header-subnav-height-medium;
-			}
 			overflow: hidden;
 			// height *needs* setting so we can hide scrollbars.
 			// This is the content height of .o-header__subnav-content
 			height: $_o-header-subnav-height-base;
+			@include oGridRespondTo('M') {
+				height: $_o-header-subnav-height-medium;
+			}
 		}
 	}
 
@@ -54,13 +54,13 @@
 			&:first-child {
 				@include _oHeaderItemSeparatorContent();
 				&:before {
+					top: 50%;
+					margin-top: - $_o-header-subnav-height-base * $_o-header-item-separator-percentage-height / 2;
+					height: $_o-header-subnav-height-base * $_o-header-item-separator-percentage-height;
 					@include oGridRespondTo('M') { // stylelint-disable-line max-nesting-depth
 						margin-top: - $_o-header-subnav-height-medium * $_o-header-item-separator-percentage-height / 2;
 						height: $_o-header-subnav-height-medium * $_o-header-item-separator-percentage-height;
 					}
-					top: 50%;
-					margin-top: - $_o-header-subnav-height-base * $_o-header-item-separator-percentage-height / 2;
-					height: $_o-header-subnav-height-base * $_o-header-item-separator-percentage-height;
 				}
 			}
 		}
@@ -98,12 +98,12 @@
 	.o-header__subnav-link {
 		@include _oHeaderLink;
 		@include _oHeaderFancyLink;
-		@include oGridRespondTo('M') {
-			padding: 8px 0;
-		}
 		color: _oHeaderGet('subnav-link');
 		display: inline-block;
 		padding: 12px 0;
+		@include oGridRespondTo('M') {
+			padding: 8px 0;
+		}
 
 		.o-header__subnav-list--breadcrumb & {
 			color: _oHeaderGet('link-highlight-text');
@@ -113,11 +113,11 @@
 	}
 
 	.o-header__subnav-link--right {
+		float: right;
+		display: none;
 		@include oGridRespondTo('M') {
 			display: block;
 		}
-		float: right;
-		display: none;
 	}
 
 	.o-header__subnav-button {

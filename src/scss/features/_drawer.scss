@@ -6,10 +6,6 @@
 		box-sizing: content-box;
 
 		&[data-o-header-drawer--js] {
-
-			@include oGridRespondTo('M') {
-				width: $_o-header-drawer-width;
-			}
 			position: fixed;
 			top: 0;
 			bottom: 0;
@@ -23,6 +19,10 @@
 
 			// this is literally the spec example for will-change
 			will-change: transform;
+
+			@include oGridRespondTo('M') {
+				width: $_o-header-drawer-width;
+			}
 
 			&[aria-hidden] {
 				@include oVisualEffectsShadowContent('low');
@@ -141,11 +141,11 @@
 	// Search
 	//
 	.o-header__drawer-search {
+		padding: $_o-header-drawer-padding-y $_o-header-drawer-padding-x;
 
 		@include oGridRespondTo('L') {
 			display: none;
 		}
-		padding: $_o-header-drawer-padding-y $_o-header-drawer-padding-x;
 	}
 
 	.o-header__drawer-search-form {

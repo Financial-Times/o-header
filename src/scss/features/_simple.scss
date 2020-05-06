@@ -11,12 +11,12 @@
 		}
 
 		.o-header__top-logo {
+			margin-top: 0;
+			margin-bottom: 0;
 
 			@include oGridRespondTo('L') {
 				@include _oHeaderLogoSize('M');
 			}
-			margin-top: 0;
-			margin-bottom: 0;
 		}
 
 		.o-header__top-takeover .o-header__nav-link {
