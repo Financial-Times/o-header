@@ -37,7 +37,7 @@ Some elements inside the header require specific data attributes so the JavaScri
 An o-header object must be constructed for every `<header>` you have on your page that uses this component.
 
 ```js
-import Header from 'o-header';
+import Header from '@financial-times/o-header';
 const headerEl = document.querySelector('.o-header');
 const header = new oHeader(headerEl);
 ```
