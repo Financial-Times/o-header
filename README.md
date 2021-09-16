@@ -1,5 +1,11 @@
 # o-header
 
+***
+
+**This component has moved to the [Origami Component System](https://github.com/Financial-Times/origami).**
+
+***
+
 Responsive header for FT branded sites. See the [Origami Navigation Service](https://www.ft.com/__origami/service/navigation) to populate `o-header` markup with real navigation data.
 
 - [Usage](#usage)
